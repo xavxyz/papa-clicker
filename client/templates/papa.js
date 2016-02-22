@@ -5,5 +5,7 @@ Template.papa.events({
 });
 
 Template.papa.helpers({
-    'currentScore': Modules.client.getCurrentScore()
+    currentScore () {
+        return Modules.client.getCurrentScore();
+    }
 });
