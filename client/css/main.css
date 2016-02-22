@@ -2,3 +2,7 @@
   padding:20px;
   background-image: url('img/papas.jpg');
 }
+
+.no-float{
+  float:none;
+}
