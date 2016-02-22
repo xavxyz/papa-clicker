@@ -3,9 +3,3 @@ Template.papa.events({
         Modules.client.papaClicked();
     }
 });
-
-Template.papa.helpers({
-    currentScore () {
-        return Modules.client.getCurrentScore();
-    }
-});
