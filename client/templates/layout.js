@@ -12,6 +12,9 @@ Template.layout.onCreated(function () {
 Template.layout.helpers({
 	optionsVisible: function(){
 		return Template.instance().OptionsVisible.get();
+	},
+	bonusList () {
+		return Bonus.find({}).fetch();
 	}
 });
 
