@@ -1,19 +1,21 @@
 <template name="layout">
   {{#if currentUser}}
-    <div class="row">
-      {{> header}}
-    </div>
-    <div class="row full-height">
-      <div class="col-md-3 papa-container full-height">
-        {{> papa}}
+    {{#if Template.subscriptionsReady}}
+      <div class="row">
+        {{> header}}
       </div>
-      <div class="col-md-5 full-height">
-        {{> inventory}}
+      <div class="row full-height">
+        <div class="col-md-3 papa-container full-height">
+          {{> papa}}
+        </div>
+        <div class="col-md-5 full-height">
+          {{> inventory}}
+        </div>
+        <div class="col-md-4 full-height">
+          {{> shop}}
+        </div>
       </div>
-      <div class="col-md-4 full-height">
-        {{> shop}}
-      </div>
-    </div>
+    {{/if}}
   {{else}}
     <div class="row">
       {{> loginButtons}}
