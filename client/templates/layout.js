@@ -6,3 +6,9 @@ Template.layout.onCreated(function () {
 	});
 });
 
+Template.layout.helpers({
+	bonusList () {
+		return Bonus.find({}).fetch();
+	}
+});
+
