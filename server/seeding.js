@@ -8,6 +8,6 @@ Meteor.startup(function () {
 			production: 1,
 			price: 0
 		});
-		console.log('basic bonus simple_click added!');
+		console.log('basic bonus simpleClick added!');
 	}
 });

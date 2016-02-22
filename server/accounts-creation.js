@@ -6,7 +6,7 @@ Accounts.onCreateUser((options, user) => {
 
 	Stuffs.insert({
 		userId: user._id,
-		type: 'Bonus',
+		collection: 'Bonus',
 		stuffId: simpleClick._id,
 		amount: 1
 	});
