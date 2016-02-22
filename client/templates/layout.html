@@ -16,10 +16,10 @@
                 <a class="navbar-brand" href="#">Papas</a>
               </div>
 
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                   <li><a id="toggleOptions" href="">Options</a></li>
-                  <li><a href="#">Statistics</a></li>
+                  <li><a id="toggleStats" href="">Statistics</a></li>
                 </ul>
               </div>
             </div>
@@ -28,6 +28,16 @@
           {{#if optionsVisible}}
             <div class="panel panel-default">
               <div class="panel-heading">Options</div>
+              <div class="panel-body">
+                <!-- put the options HTML here -->
+                <!-- {{> options}} -->
+              </div>
+            </div>
+          {{/if}}
+
+          {{#if statsVisible}}
+            <div class="panel panel-default">
+              <div class="panel-heading">Stats</div>
               <div class="panel-body">
                 <!-- put the options HTML here -->
                 <!-- {{> options}} -->
