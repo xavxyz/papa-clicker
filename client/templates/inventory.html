@@ -1,3 +1,16 @@
 <template name="inventory">
-    Inventory
+  <div class="panel panel-default">
+    <ul class="list-group">
+      <!-- put some items here -->
+      {{#each inventoryItems}}
+        {{> inventoryItem}}
+      {{/each}}
+    </ul>
+  </div>
+</template>
+
+<template name="inventoryItem">
+  <li class="list-group-item">
+    Name of the bonus
+  </li>
 </template>

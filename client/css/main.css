@@ -12,6 +12,10 @@ html, body, .full-height{
   height:100%;
 }
 
+.full-height{
+  overflow:auto;
+}
+
 html, body{
   overflow:hidden;
 }
