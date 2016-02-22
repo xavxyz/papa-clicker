@@ -4,10 +4,9 @@ Accounts.onCreateUser((options, user) => {
 
 	let simpleClick = Bonus.findOne({name: 'simpleClick'});
 
-	Stuffs.insert({
+	Belongings.insert({
 		userId: user._id,
-		collection: 'Bonus',
-		stuffId: simpleClick._id,
+		belongingId: simpleClick._id,
 		amount: 1
 	});
 
