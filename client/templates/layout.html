@@ -1,31 +1,19 @@
-<head><title>Papas Clicker</title></head>
-<body>
-  <div class="row full-height">
-    <div class="col-md-3 papa-container full-height">
-
-      <!-- attach click event here-->
-      <img id="thepapa" src="img/papa.gif"/>
-
-    </div>
-    <div class="col-md-5 full-height">
-      Inventory
-    </div>
-    <div class="col-md-4 full-height">
-      <div class="list-group">
-
-        <!-- click event handler here -->
-        <a href="#" class="list-group-item">
-          <h4 class="list-group-item-heading">Clicker</h4>
-          <p class="list-group-item-text">Let the clicker click for you!</p>
-        </a>
-        <a href="#" class="list-group-item">
-          <h4 class="list-group-item-heading">Javier</h4>
-          <p class="list-group-item-text">Javier will get the papa's for you!</p>
-        </a>
+<template name="layout">
+  {{#if currentUser}}
+    <div class="row full-height">
+      <div class="col-md-3 papa-container full-height">
+        {{> papa}}
+      </div>
+      <div class="col-md-5 full-height">
+        {{> inventory}}
+      </div>
+      <div class="col-md-4 full-height">
+        {{> shop}}
       </div>
     </div>
-  </div>
-  <div class="row">
-    {{> loginButtons}}
-  </div>
-</body>
+  {{else}}
+    <div class="row">
+      {{> loginButtons}}
+    </div>
+  {{/if}}
+</template>
