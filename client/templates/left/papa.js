@@ -4,3 +4,7 @@ Template.papa.events({
         Modules.client.users.papaClicked(1);
     }
 });
+
+Template.papa.onRendered(function(){
+    $('#thepapa').draggable();
+});
