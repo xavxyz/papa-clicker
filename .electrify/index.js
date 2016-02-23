@@ -3,20 +3,21 @@ var browser   = require('browser-window');
 var electrify = require('electrify')(__dirname);
 
 var window    = null;
+var splash = null; // splash variable
 
 app.on('ready', function() {
+  splash = new browser({ // starts splash window
+    width: 1200, height: 900,
+    'node-integration': false // node integration must to be off
+  });
+
+  splash.loadURL('./splash.html');
 
   // electrify start
   electrify.start(function(meteor_root_url) {
 
-    // creates a new electron window
-    window = new browser({
-      width: 1200, height: 900,
-      'node-integration': false // node integration must to be off
-    });
-
     // open up meteor root url
-    window.loadURL(meteor_root_url);
+    splash.loadURL(meteor_root_url);
   });
 });
 
