@@ -116,7 +116,8 @@ li.bonusList {
   position:absolute;
   top: 200px;
   left:500px;
-  width: 300px;
+  width: 150px;
+  z-index: 100000000;
 }
 
 @-webkit-keyframes rotating-floating {
@@ -161,10 +162,11 @@ li.bonusList {
 
 #mojo {
   position:absolute;
-  width: 200px;
-  height: 100px;
-  bottom: 100px;
-  left: 300px;
-  background-image: url('img/mojo-rojo-6.jpg');
+  width: 300px;
+  height: 300px;
+  bottom: 20px;
+  left: 600px;
+  background-image: url('img/mojo_rojo.png');
   background-size:cover;
+  cursor: grabbing;
 }

@@ -8,5 +8,9 @@ Template.floatingPapa.events({
 Template.floatingPapa.onRendered(function(){
     $('#the_floating_papa').draggable();
 
-    $('#mojo').droppable();
+    $('#mojo').droppable({
+        activate: function (event, ui) {
+            sAlert.success("Allright you've put the papa in the mojo!");
+        }
+    });
 });
