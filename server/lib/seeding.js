@@ -13,6 +13,10 @@ Meteor.startup(function () {
 				name: 'Cursor',
 				production: 10,
 				price: 10
+			}, {
+				name: 'Big papa',
+				production: 50,
+				price: 50
 			}
 		];
 
