@@ -1,3 +1,8 @@
 <template name="stats">
-  Total clicks: {{totalClicks}}
+  Total clicks: {{totalClicks}}<br />
+
+  bonuses:<br />
+  {{#each bonus in bonuses}}
+    <li class="bonusList">Name: {{bonus.bonusName}}<br />Productions: {{bonus.bonusProduction}}<br />Amount: {{bonus.belongingsAmount}}</li>
+  {{/each}}
 </template>

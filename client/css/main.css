@@ -12,7 +12,7 @@
   transform: rotate(7deg);
   width:85%;
   margin-left:7.5%;
-} 
+}
 
 html, body, .full-height{
   height:100%;
@@ -24,4 +24,13 @@ html, body, .full-height{
 
 html, body{
   overflow:hidden;
+}
+
+li.bonusList {
+  display: block;
+  border-width: 1px;
+  border-top: 1px;
+  border-bottom: 1px;
+  padding: 5px;
+  background: #f0f0f0;
 }
