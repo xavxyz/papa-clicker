@@ -33,7 +33,7 @@ Meteor.startup(function () {
 		];
 
 		const upgrade = {
-			name: 'Super click',
+			name: 'Papa Surfing 🏄',
 			value: 10,
 			price: 100
 		};

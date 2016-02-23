@@ -13,9 +13,13 @@ Template.clickers.helpers({
   }
 });
 
-Template.clickers.onCreated(function(){
+Template.clickers.onCreated(function() {
   //JJT | Do we really need this here?
-  this.cursorBonusId = Bonus.findOne({name: 'Cursor'})._id;
+  const cursor = Bonus.findOne({name: 'Cursor'});
+
+  if (cursor !== undefined) {
+    this.cursorBonusId = cursor._id;
+  }
 });
 
 Template.clickers.onRendered(function () {
