@@ -27,6 +27,6 @@ Template.clickers.onRendered(function () {
     if(nextClicker.length == 0){
       nextClicker = firstClicker;
     }
-    nextClicker.addClass("current").animate({"height":"20px"}).animate({"height":"12px"});
+    nextClicker.addClass("current").animate({"height":"20px"},100).animate({"height":"12px"});
   },1000);
 });

@@ -4,14 +4,19 @@
 
 #thepapa{
     width:80%;
-    margin-left:10%;
-    margin-top:30%;
 }
 
 #thepapa:hover{
   transform: rotate(7deg);
   width:85%;
   margin-left:7.5%;
+}
+
+#papaWrapper{
+  width:80%;
+  height:200px;
+  padding-top:10px;
+  padding-left:10%;
 }
 
 html, body, .full-height{
