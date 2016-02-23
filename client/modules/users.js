@@ -3,8 +3,9 @@ Modules.client.users = {};
 let papaClicked = (papas) => {
 	Meteor.call('updateScore', papas, function(err, result){
 		if(! err){
-			console.log("Method result:" + result);
 			console.log(`Added ${papas} papas successfully!`);
+		} else {
+			console.log(err);
 		}
 	});
 };

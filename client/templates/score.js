@@ -4,7 +4,7 @@ Template.score.onCreated(function () {
     this.currentRate = new ReactiveVar(0);
 
     this.autorun(() => {
-      this.currentRate.set(Modules.both.utility.rate() / 5);
+        this.currentRate.set(Modules.both.utility.rate() / 5);
     });
 
     // every 200ms, update the score with the 0.2 rate per second
