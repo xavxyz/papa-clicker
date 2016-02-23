@@ -1,10 +1,14 @@
 <template name="shop">
   <div class="list-group">
-    <a href="" rel="buy-bonus" class="list-group-item">
-      <h4 class="list-group-item-heading">{{name}}</h4>
-      <p class="list-group-item-text">Produces {{production}} papas per second</p>
-      <p class="list-group-item-text">Costs {{price}} papas</p>
-      <p class="list-group-item-text">{{belongingCount _id}}</p>
-    </a>
+    {{> shopItem}}
   </div>
+</template>
+
+<template name="shopItem">
+  <a href="" rel="buy-bonus" class="list-group-item">
+    <h4 class="list-group-item-heading">{{name}}</h4>
+    <p class="list-group-item-text">Produces {{production}} papas per second</p>
+    <p class="list-group-item-text">Costs {{price}} papas</p>
+    <p class="list-group-item-text">{{belongingCount _id}}</p>
+  </a>
 </template>
