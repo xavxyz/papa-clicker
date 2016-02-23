@@ -49,9 +49,11 @@
           {{> inventory}}
         </div>
         <div class="col-md-4 full-height">
-          {{#each bonus in bonusList}}
-            {{> shop bonus}}
-          {{/each}}
+          <div class="list-group">
+            {{#each bonus in bonusList}}
+              {{> shop bonus}}
+            {{/each}}
+          </div>
         </div>
       </div>
     {{/if}}
