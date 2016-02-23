@@ -111,3 +111,60 @@ li.bonusList {
   background-color: #fcf8e3;
   border-color: #faebcc;
 }
+
+#the_floating_papa{
+  position:absolute;
+  top: 200px;
+  left:500px;
+  width: 300px;
+}
+
+@-webkit-keyframes rotating-floating {
+  from {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  to {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotating-floating {
+  from {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  to {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+.rotating-floating {
+  -webkit-animation: rotating-floating 4s linear infinite;
+  -moz-animation: rotating-floating 4s linear infinite;
+  -ms-animation: rotating-floating 4s linear infinite;
+  -o-animation: rotating-floating 4s linear infinite;
+  animation: rotating-floating 4s linear infinite;
+}
+
+#mojo {
+  position:absolute;
+  width: 200px;
+  height: 100px;
+  bottom: 100px;
+  left: 300px;
+  background-image: url('img/mojo-rojo-6.jpg');
+  background-size:cover;
+}
