@@ -16,7 +16,8 @@ Template.stats.helpers({
             belongingsAmount: item.amount,
             bonusName: bonus.name,
             bonusProduction: bonus.production,
-            bonusPrice: bonus.price
+            bonusPrice: bonus.price,
+            bonusPerSec: item.amount * bonus.production
           }
 
           bonusArray.push(obj);
