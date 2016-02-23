@@ -4,6 +4,7 @@ Template.score.onCreated(function () {
     this.currentRate = new ReactiveVar(0);
 
     this.autorun(() => {
+
         this.currentRate.set(Modules.both.utility.rate() / 5);
     });
 
