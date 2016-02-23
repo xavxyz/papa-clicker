@@ -3,10 +3,10 @@ Modules.client.users = {};
 let papaClicked = (papas) => {
 	Meteor.call('updateScore', papas, function(err, result){
 		if(! err){
-			sAlert.success('Papa licked successfully');
+			console.log("is this shown");
+			sAlert.success(`Added ${result} papas successfully!`);
 		}else{
 			sAlert.error('You failed to lick the papa');
-			console.log(`Added ${papas} papas successfully!`);
 		}
 	});
 };

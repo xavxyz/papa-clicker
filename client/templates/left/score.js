@@ -9,7 +9,14 @@ Template.score.onCreated(function () {
 
     // every 200ms, update the score with the 0.2 rate per second
     Meteor.setInterval(() => {
-        Modules.client.users.papaClicked(this.currentRate.get());
+        Meteor.call('updateScore', this.currentRate.get(), function(err, result){
+            if(! err){
+//                console.log("is this shown");
+            }else{
+                console.log("failed to papas to your account");
+            }
+        });
+
         this.currentScore.set(Modules.client.users.getCurrentScore());
     }, 200);
 });
