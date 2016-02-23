@@ -48,9 +48,16 @@
 
         </div>
         <div class="col-md-4 full-height rightBar">
+          <h2 class="text-warning">Upgrades Shop</h2>
+          <div class="list-group">
+            {{#each upgrade in upgradesList}}
+              {{> upgradesShop upgrade}}
+            {{/each}}
+          </div>
+          <h2 class="text-warning">Bonus Shop</h2>
           <div class="list-group">
             {{#each bonus in bonusList}}
-              {{> shop bonus}}
+              {{> bonusShop bonus}}
             {{/each}}
           </div>
         </div>

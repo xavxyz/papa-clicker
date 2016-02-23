@@ -2,6 +2,7 @@ Template.layout.onCreated(function () {
 	this.autorun(() => {
 		if (Meteor.user()) {
 			this.subscribe('Bonus.all');
+			this.subscribe('Upgrades.all');
 			this.subscribe('Belongings.possessed');
 		}
 	});
@@ -21,6 +22,9 @@ Template.layout.helpers({
 	},
 	bonusList () {
 		return Bonus.find({}).fetch();
+	},
+	upgradesList () {
+		return Upgrades.find({}).fetch();
 	},
 	topScorers() {
 		return Meteor.users.find();

@@ -1,8 +1,7 @@
-<template name="shop">
+<template name="bonusShop">
   <a href="" rel="buy-bonus" class="list-group-item">
-    <h4 class="list-group-item-heading">{{name}}</h4>
+    <button class="btn btn-lg btn-warning">{{name}} <span class="badge">{{belongingCount _id}}</span></button>
     <p class="list-group-item-text">Produces {{production}} papas per second</p>
     <p class="list-group-item-text">Costs {{priceTimesAmount}} papas</p>
-    <p class="list-group-item-text">{{belongingCount _id}}</p>
   </a>
 </template>
