@@ -8,7 +8,12 @@ Template.shop.events({
 
 		Meteor.call('Bonus.buy', buyAction, function(err, result){
 			if(! err){
-				sAlert.success("Nice, you've just bought something with id " + result);
+				const bonus = Bonus.findOne({_id: result});
+				if(bonus){
+					sAlert.success("Nice, you've just bought some " + bonus.name);
+				}else{
+					sAlert.success("Nice, you've just bought something with id " + result);
+				}
 			}else{
 				sAlert.error('You failed to buy, do you have papas');
 			}
