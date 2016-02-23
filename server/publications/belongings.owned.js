@@ -1,4 +1,4 @@
-Meteor.publish('Belongings.possessed', function() {
+Meteor.publish('Belongings.owned', function() {
 	if (!this.userId) {
 		return [];
 	}

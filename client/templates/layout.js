@@ -2,8 +2,8 @@ Template.layout.onCreated(function () {
 	this.autorun(() => {
 		if (Meteor.user()) {
 			this.subscribe('Bonus.all');
-			this.subscribe('Upgrades.all');
-			this.subscribe('Belongings.possessed');
+			this.subscribe('Upgrades.notOwned');
+			this.subscribe('Belongings.owned');
 		}
 	});
 
