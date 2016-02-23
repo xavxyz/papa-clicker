@@ -1,5 +1,18 @@
+Template.score.onCreated(function () {
+    this.currentScore = new ReactiveVar(Modules.client.users.getCurrentScore());
+
+    this.autorun(() => {
+        let ratePerSecond = Modules.both.utility.rate();
+
+        Meteor.setInterval(() => {
+            this.currentScore.set(this.currentScore.get() + ratePerSecond);
+        }, 1000);
+        debugger
+    });
+});
+
 Template.score.helpers({
     currentScore () {
-        return Modules.client.users.getCurrentScore();
+        return Template.instance().currentScore.get();
     }
 });
