@@ -1,4 +1,4 @@
-Template.shop.events({
+Template.upgradesShop.events({
 	'click [rel=buy-bonus]' (event, template) {
 		event.preventDefault();
 		const buyAction = {
@@ -19,15 +19,5 @@ Template.shop.events({
 				sAlert.error('You failed to buy, do you have papas');
 			}
 		});
-	}
-});
-
-Template.shop.helpers({
-	belongingCount () {
-		return Meteor.user().getBonusCount(Template.instance().data._id);
-	},
-	priceTimesAmount () {
-		const instance = Template.instance();
-		return instance.data.price * Meteor.user().getBonusCount(instance.data._id);
 	}
 });
