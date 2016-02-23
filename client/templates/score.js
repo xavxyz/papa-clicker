@@ -7,7 +7,6 @@ Template.score.onCreated(function () {
         Meteor.setInterval(() => {
             this.currentScore.set(this.currentScore.get() + ratePerSecond);
         }, 1000);
-        debugger
     });
 });
 
