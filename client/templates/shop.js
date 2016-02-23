@@ -5,7 +5,14 @@ Template.shop.events({
 			bonusId: template.data._id,
 			score: Meteor.user().score
 		};
-		Meteor.call('Bonus.buy', buyAction);
+
+		Meteor.call('Bonus.buy', buyAction, function(err, result){
+			if(! err){
+				sAlert.success("Nice, you've just bought something with id " + result);
+			}else{
+				sAlert.error('You failed to buy, do you have papas');
+			}
+		});
 	}
 });
 

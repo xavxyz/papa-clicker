@@ -21,6 +21,9 @@ Template.layout.helpers({
 	},
 	bonusList () {
 		return Bonus.find({}).fetch();
+	},
+	topScorers() {
+		return Meteor.users.find();
 	}
 });
 
