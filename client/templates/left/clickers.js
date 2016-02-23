@@ -1,14 +1,16 @@
 Template.clickers.helpers({
   clickers: function(){
     let cursorBonusId   = Template.instance().cursorBonusId;
-    let ownedCursor     = Belongings.findOne({userId: Meteor.userId(), belongingId: cursorBonusId});
-    if(ownedCursor !== "undefined"){
-      let userCursors = ownedCursor.amount;
-      let returnArr       = [];
-      for (let i = 0; i < userCursors; i++) {
-        returnArr.push({});
-      };
-      return returnArr;
+    if (cursorBonusId !== undefined) {
+      let ownedCursor     = Belongings.findOne({userId: Meteor.userId(), belongingId: cursorBonusId});
+      if(ownedCursor !== "undefined"){
+        let userCursors = ownedCursor.amount;
+        let returnArr       = [];
+        for (let i = 0; i < userCursors; i++) {
+          returnArr.push({});
+        };
+        return returnArr;
+      }
     }
   }
 });
