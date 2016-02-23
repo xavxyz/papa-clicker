@@ -1,31 +1,23 @@
 Template.score.onCreated(function () {
-    // init the score with the last registered in the db
-    this.currentScore = new ReactiveVar(Modules.client.users.getCurrentScore());
-    this.currentRate = new ReactiveVar(0);
-
-    this.autorun(() => {
-        this.currentRate.set(Modules.both.utility.rate() / 5);
-    });
-
     // every 200ms, update the score with the 0.2 rate per second
-    Meteor.setInterval(() => {
-        Meteor.call('updateScore', this.currentRate.get(), function(err, result){
-            if(! err){
-//                console.log("is this shown");
-            }else{
-                console.log("failed to papas to your account");
-            }
-        });
-
-        this.currentScore.set(Modules.client.users.getCurrentScore());
-    }, 200);
+    if (Meteor.user()) {
+        Meteor.setInterval(() => {
+            Meteor.call('updateScore', Modules.both.utility.rate() / 5, function (err, result) {
+                if (!err) {
+                    //                console.log("is this shown");
+                } else {
+                    console.log("failed to papas to your account");
+                }
+            });
+        }, 200);
+    }
 });
 
 Template.score.helpers({
     currentScore () {
-        return Template.instance().currentScore.get();
+        return Modules.client.users.getCurrentScore();
     },
     currentRate () {
-        return Template.instance().currentRate.get();
+        return Modules.both.utility.rate();
     }
 });

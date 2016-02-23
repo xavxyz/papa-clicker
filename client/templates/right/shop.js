@@ -3,6 +3,7 @@ Template.shop.events({
 		event.preventDefault();
 		const buyAction = {
 			bonusId: template.data._id,
+			amount: Meteor.user().getBonusCount(template.data._id),
 			score: Meteor.user().score
 		};
 
@@ -22,7 +23,11 @@ Template.shop.events({
 });
 
 Template.shop.helpers({
-	belongingCount (bonusId) {
-		return Meteor.user().getBonusCount(bonusId);
+	belongingCount () {
+		return Meteor.user().getBonusCount(Template.instance().data._id);
+	},
+	priceTimesAmount () {
+		const instance = Template.instance();
+		return instance.data.price * Meteor.user().getBonusCount(instance.data._id);
 	}
 });
