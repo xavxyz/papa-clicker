@@ -3,7 +3,7 @@ Template.clickers.helpers({
     let cursorBonusId   = Template.instance().cursorBonusId;
     if (cursorBonusId !== undefined) {
       let ownedCursor     = Belongings.findOne({userId: Meteor.userId(), belongingId: cursorBonusId});
-      if(ownedCursor !== "undefined"){
+      if (ownedCursor) {
         let userCursors = ownedCursor.amount;
         let returnArr       = [];
         for (let i = 0; i < userCursors; i++) {
