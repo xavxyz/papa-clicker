@@ -2,11 +2,11 @@
   <h5>Total papas: {{totalClicks}}</h5>
 
   <h4>Bonuses:</h4>
-  {{#each bonus in bonuses}}
+  {{#each b in bonuses}}
     <li class="bonusList">
-      Name: {{bonus.bonusName}}<br />
-      Productions: {{bonus.bonusProduction}}<br />
-      Amount: {{bonus.belongingsAmount}}<br />
-      Per second: {{bonus.bonusPerSec}}</li>
+      Name: {{b.bonus.name}}<br />
+      Productions: {{b.bonus.production}}<br />
+      Amount: {{b.belonging.amount}}<br />
+      Per second: {{b.bonusPerSec}}</li>
   {{/each}}
 </template>
